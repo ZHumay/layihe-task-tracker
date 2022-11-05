@@ -1,7 +1,7 @@
 
 const input = document.querySelector(".comment")
 
-const tasks = document.querySelector("#tasks")
+const tasks = document.querySelector("#lists")
 tasks.style.display="none"
 
 document.querySelector('.add').onclick = function(){
@@ -11,9 +11,9 @@ document.querySelector('.add').onclick = function(){
 
     else{  
         tasks.style.display="block"
-        document.querySelector('#tasks').innerHTML += `
-            <div class="task">
-                <span id="taskname">✓
+        document.querySelector('#lists').innerHTML += `
+            <div class="list">
+                <span id="listname">✓
                     ${document.querySelector('.input').value}
                 </span>
                 <button class="delete">X</button>
@@ -35,7 +35,7 @@ function color(event) {
     event.target.style.textDecoration = 'line-through' ;
   
   }
-  const elements = document.querySelectorAll('#tasks');
+  const elements = document.querySelectorAll('#lists');
   elements.forEach((element) => {  
     element.addEventListener('click',color);
   });
@@ -62,7 +62,7 @@ let img2=document.querySelector(".imagebut2")
 // const tasks = document.querySelector("#tasks")
 
 img1.addEventListener('click', () => {
-let task=document.querySelectorAll('.task')
+let task=document.querySelectorAll('.list')
 let x = [];
 
 task.forEach(ele =>{
@@ -74,8 +74,8 @@ x.sort()
 
 x.forEach(item=>{
     
-   tasks.innerHTML+= `<div class="task">
-    <span id="taskname">
+   tasks.innerHTML+= `<div class="list">
+    <span id="listname">
         ${item}
     </span>
     <button class="delete">X</button>
@@ -95,7 +95,7 @@ let c = document.querySelectorAll(".delete");
 
 
 img2.addEventListener('click', () => {
-    let task=document.querySelectorAll('.task')
+    let task=document.querySelectorAll('.list')
     let y = [];
     
     task.forEach(ele =>{
@@ -107,8 +107,8 @@ img2.addEventListener('click', () => {
     
     y.forEach(item=>{
         
-       tasks.innerHTML+= `<div class="task">
-        <span id="taskname">
+       tasks.innerHTML+= `<div class="list">
+        <span id="listname">
             ${item}
         </span>
         <button class="delete">X</button>
@@ -136,4 +136,3 @@ img2.addEventListener("click",()=>{
     img2.style.display="none";  
 })
 
- 

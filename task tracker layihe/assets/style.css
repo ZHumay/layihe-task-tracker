@@ -87,10 +87,10 @@ color: aliceblue;
 .imagebut2:hover{
     background-color: rgb(133, 93, 187);
 }
-.task:hover{
+.list:hover{
     background-color: #f0efec;
 }
-.task button:hover{
+.delete:hover{
     background-color: rgb(133, 93, 187);
 }
 .plus{
@@ -104,7 +104,7 @@ color: aliceblue;
     color:aliceblue ;
 }
   
-#tasks{
+#lists{
     border-radius: 10px;
     width: 320px;
     position: relative;
@@ -112,9 +112,10 @@ color: aliceblue;
     padding: 30px 20px;
     margin-left: 70px;
     border: 1px solid #939697;
-    justify-content: flex-start;
+    
 }
-.task{
+
+.list{
     border-radius: 5px;
     align-items: center;
     justify-content: space-between;
@@ -122,17 +123,17 @@ color: aliceblue;
     cursor: pointer;
     background-color: #ffffff;
     height: 30px;
-    margin-top: 8px;
+    /* margin-bottom: 2px; */
     padding: 5px 10px;
     display: flex;
 
 }
-.task span{
+.list span{
     font-size: 20px;
     font-weight: 400;
     color: black;
 }
-.task button{
+.delete{
     border-radius: 71px;
     background-color: rgb(208, 199, 199);
     color: black;
